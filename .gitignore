@@ -38,3 +38,4 @@ override.tf.json
 terraform.rc
 /aws
 output.tf
+terraform-docs
