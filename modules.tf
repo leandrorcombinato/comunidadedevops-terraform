@@ -21,3 +21,11 @@ module "eks_manager_node_group" {
   subnet_private_1b = module.eks_network.subnet_priv_1b
   tags              = local.tags
 }
+
+module "eks_aws_load_balancer_controller" {
+  source       = "./modules/aws-load-balancer-controller"
+  project_name = var.project_name
+  tags         = local.tags
+  oidc         = module.eks_cluster.oidc
+  cluster_name = module.eks_cluster.cluster_name
+}
