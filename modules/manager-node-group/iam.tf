@@ -27,18 +27,18 @@ resource "aws_iam_role" "eks_mng_role" {
 
 resource "aws_iam_policy_attachment" "eks_mng_role_attachment_worker" {
   name       = "${var.project_name}-cluster-role-attachment"
-  roles      = aws_iam_role.eks_mng_role.name
-  policy_arn = "arm:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+  roles      = [aws_iam_role.eks_mng_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
 }
 
 resource "aws_iam_policy_attachment" "eks_mng_role_attachment_ecr" {
   name       = "${var.project_name}-cluster-role-attachment"
-  roles      = aws_iam_role.eks_mng_role.name
-  policy_arn = "arm:aws:iam::aws:policy/AmazonEKSContainerRegistryReadOnly"
+  roles      = [aws_iam_role.eks_mng_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
 
 resource "aws_iam_policy_attachment" "eks_mng_role_attachment_cni" {
   name       = "${var.project_name}-cluster-role-attachment"
-  roles      = aws_iam_role.eks_mng_role.name
-  policy_arn = "arm:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+  roles      = [aws_iam_role.eks_mng_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
 }

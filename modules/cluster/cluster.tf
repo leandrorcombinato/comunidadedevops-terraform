@@ -1,6 +1,6 @@
 resource "aws_eks_cluster" "eks_cluster" {
   name     = "${var.project_name}-cluster"
-  role_arn = aws_iam_role.eks_cluster_role
+  role_arn = aws_iam_role.eks_cluster_role.arn
 
   vpc_config {
     subnet_ids = [
@@ -12,7 +12,7 @@ resource "aws_eks_cluster" "eks_cluster" {
   }
 
   depends_on = [
-    aws_iam_role_policy_attachment.eks_cluster_role_attachment
+    aws_iam_policy_attachment.eks-cluster-role-attachment
   ]
 
   tags = merge(

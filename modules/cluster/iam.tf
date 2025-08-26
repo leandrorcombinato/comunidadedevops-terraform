@@ -27,6 +27,6 @@ resource "aws_iam_role" "eks_cluster_role" {
 
 resource "aws_iam_policy_attachment" "eks-cluster-role-attachment" {
   name       = "${var.project_name}-cluster-role-attachment"
-  roles      = aws_iam_role.eks_cluster_role.name
-  policy_arn = "arm:aws:iam::aws:policy/AmazonEKSCluster"
+  roles      = [aws_iam_role.eks_cluster_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
 }
