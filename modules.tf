@@ -22,7 +22,7 @@ module "eks_manager_node_group" {
   tags              = var.tags
 }
 
-module "eks_aws_load_balancer_controller" {
+module "eks_load_balancer_controller" {
   source       = "./modules/aws-load-balancer-controller"
   project_name = var.project_name
   tags         = var.tags

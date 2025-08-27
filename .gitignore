@@ -40,3 +40,4 @@ terraform.rc
 output.tf
 terraform-docs
 .pre-commit-config.yaml
+plan.tfplan
