@@ -39,3 +39,4 @@ terraform.rc
 /aws
 output.tf
 terraform-docs
+.pre-commit-config.yaml
