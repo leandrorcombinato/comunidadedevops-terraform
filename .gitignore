@@ -17,6 +17,14 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 
+# Ignore only the default terraform.tfvars file
+terraform.tfvars
+
+# But allow environment-specific files
+!terraform.tfvars.dev
+!terraform.tfvars.hml
+!terraform.tfvars.prod
+
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
 override.tf

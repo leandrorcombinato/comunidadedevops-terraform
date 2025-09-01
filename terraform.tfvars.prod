@@ -1,0 +1,10 @@
+cidr_block   = "10.2.0.0/16"
+project_name = "eks-lab-prod"
+region       = "us-east-1"
+oidc         = ""
+tags = {
+  Environment = "Production"
+  Owner       = "comunidadedevsdemo"
+  Project     = "eks-lab-prod"
+  Department  = "Engineering"
+}

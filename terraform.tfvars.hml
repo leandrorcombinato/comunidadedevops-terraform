@@ -1,0 +1,10 @@
+cidr_block   = "10.1.0.0/16"
+project_name = "eks-lab-hml"
+region       = "us-east-1"
+oidc         = ""
+tags = {
+  Environment = "Hml"
+  Owner       = "comunidadedevsdemo"
+  Project     = "eks-lab-hml"
+  Department  = "Engineering"
+}
