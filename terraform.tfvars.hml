@@ -1,10 +1,11 @@
 cidr_block   = "10.1.0.0/16"
-project_name = "eks-lab-hml"
+project_name = "comunidadedevops-hml"
 region       = "us-east-1"
 oidc         = ""
 tags = {
-  Environment = "Hml"
+  Environment = "Homologacao"
   Owner       = "comunidadedevsdemo"
-  Project     = "eks-lab-hml"
+  Project     = "comunidadedevops-hml"
   Department  = "Engineering"
+  AMI         = "Ubuntu 22.04 LTS"
 }

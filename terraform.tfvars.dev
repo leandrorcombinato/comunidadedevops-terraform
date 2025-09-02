@@ -1,10 +1,11 @@
 cidr_block   = "10.0.0.0/16"
-project_name = "eks-lab-dev"
+project_name = "comunidadedevops-dev"
 region       = "us-east-1"
 oidc         = ""
 tags = {
   Environment = "Development"
   Owner       = "comunidadedevsdemo"
-  Project     = "eks-lab-dev"
+  Project     = "comunidadedevops-dev"
   Department  = "Engineering"
+  AMI         = "Ubuntu 22.04 LTS"
 }
